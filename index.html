@@ -81,22 +81,46 @@
                 <h3>Bella Pasta Restaurante</h3>
 
                 <p>
-                    Sistema desenvolvido para gestão e atendimento de restaurante.
+                    Sistema desenvolvido para gestão e atendimento de restaurante. (Clique para visualizar a imagem completa).
                 </p>
 
                 <div class="grid">
 
-                    <div class="work-card"><img src="layout_restaurante/1.png" alt="Tela 01"></div>
-                    <div class="work-card"><img src="layout_restaurante/2.png" alt="Tela 01"></div>
-                    <div class="work-card"><img src="layout_restaurante/3.png" alt="Tela 01"></div>
+                    <div class="work-card">
+    <img src="layout_restaurante/1.png" alt="Tela 01" onclick="abrirImagem(this.src)">
+</div>
 
-                    <div class="work-card"><img src="layout_restaurante/4.png" alt="Tela 01"></div>
-                    <div class="work-card"><img src="layout_restaurante/5.png" alt="Tela 01"></div>
-                    <div class="work-card"><img src="layout_restaurante/6.png" alt="Tela 01"></div>
+<div class="work-card">
+    <img src="layout_restaurante/2.png" alt="Tela 02" onclick="abrirImagem(this.src)">
+</div>
 
-                    <div class="work-card"><img src="layout_restaurante/7.png" alt="Tela 01"></div>
-                    <div class="work-card"><img src="layout_restaurante/8.png" alt="Tela 01"></div>
-                    <div class="work-card"><img src="layout_restaurante/9.png" alt="Tela 01"></div>
+<div class="work-card">
+    <img src="layout_restaurante/3.png" alt="Tela 03" onclick="abrirImagem(this.src)">
+</div>
+
+<div class="work-card">
+    <img src="layout_restaurante/4.png" alt="Tela 04" onclick="abrirImagem(this.src)">
+</div>
+
+<div class="work-card">
+    <img src="layout_restaurante/5.png" alt="Tela 05" onclick="abrirImagem(this.src)">
+</div>
+
+<div class="work-card">
+    <img src="layout_restaurante/6.png" alt="Tela 06" onclick="abrirImagem(this.src)">
+</div>
+
+<div class="work-card">
+    <img src="layout_restaurante/7.png" alt="Tela 07" onclick="abrirImagem(this.src)">
+</div>
+
+<div class="work-card">
+    <img src="layout_restaurante/8.png" alt="Tela 08" onclick="abrirImagem(this.src)">
+</div>
+
+<div class="work-card">
+    <img src="layout_restaurante/9.png" alt="Tela 09" onclick="abrirImagem(this.src)">
+</div>
 
                 </div>
 
@@ -193,7 +217,37 @@ window.onclick = function(event){
     if(event.target === modal){
         modal.style.display = 'none';
     }
+}<!-- LIGHTBOX -->
+
+<div id="lightbox" class="lightbox">
+
+    <span class="fechar-lightbox" onclick="fecharImagem()">
+        &times;
+    </span>
+
+    <img id="imagemExpandida" src="">
+
+</div>
+
+<script>
+
+function abrirImagem(src){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("imagemExpandida").src = src;
 }
+
+function fecharImagem(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+document.getElementById("lightbox").addEventListener("click", function(e){
+
+    if(e.target === this){
+        fecharImagem();
+    }
+
+});
+
 </script>
 
 </body>
