@@ -278,3 +278,52 @@ footer{
     }
 
 }
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.85);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-content{
+    background:#111111;
+    border:1px solid rgba(0,200,83,.3);
+    border-radius:20px;
+    width:90%;
+    max-width:450px;
+    padding:40px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 0 30px rgba(0,200,83,.15);
+}
+
+.modal-content h2{
+    color:#00c853;
+    margin-bottom:25px;
+}
+
+.contato-info p{
+    color:#bdbdbd;
+    margin-bottom:5px;
+}
+
+.contato-info strong{
+    color:#ffffff;
+    font-size:1.1rem;
+}
+
+.fechar{
+    position:absolute;
+    top:10px;
+    right:20px;
+    font-size:30px;
+    color:#00c853;
+    cursor:pointer;
+}
